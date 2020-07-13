@@ -1,0 +1,135 @@
+<!-- ======= Contact Me Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Contact Me</span>
+      <h2>Contact Me</h2>
+
+      <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="info-box">
+              <i class="bx bx-share-alt"></i>
+              <h3>Social Profiles</h3>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://github.com/BassamS" class="github" target="_blank"><i class="icofont-github"></i></a>
+                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="google-plus" target="_blank"><i class="icofont-skype"></i></a>
+                <a href="https://es.linkedin.com/in/bassam-al-saedy-796b0244" class="linkedin" target="_blank"><i
+                    class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box mt-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Me</h3>
+              <p>basaidi@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box mt-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Me</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <form class="php-email-form" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+          <h5 *ngIf="success">Your message has been sent. Thank you!</h5>
+          <div class="form-row">
+
+            <!-- Name Validation -->
+            <div class="col-md-6 form-group">
+              <input type="text" formControlName="name" name="name" class="form-control" id="name"
+                placeholder="Your Name">
+
+              <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                <div *ngIf="messageForm.controls.name.errors.required">Your name is required!</div>
+              </div>
+              <div class="validate"></div>
+            </div>
+
+            <!-- Email Validation -->
+            <div class="col-md-6 form-group">
+              <input type="email" formControlName="email" class="form-control" name="email" id="email"
+                placeholder="Your Email" data-rule="email">
+
+              <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+                <div *ngIf="messageForm.controls.email.errors.required">Your email is required!</div>
+              </div>
+
+              <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+                <div *ngIf="messageForm.controls.email.errors.email">Your email is invalid!</div>
+              </div>
+
+              <div class="validate"></div>
+            </div>
+
+          </div>
+
+          <!-- Subject Validation -->
+          <div class="form-group">
+            <input type="text" formControlName="subject" class="form-control" name="subject" id="subject"
+              placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+
+
+            <div *ngIf="submitted && messageForm.controls.subject.errors" class="error">
+              <div *ngIf="messageForm.controls.subject.errors.required">Subject is required!</div>
+            </div>
+            <div class="validate"></div>
+          </div>
+
+          <!-- Message Validation -->
+          <div class="form-group">
+            <textarea class="form-control" name="message" formControlName="message" placeholder="Message"
+              rows="7"></textarea>
+
+            <!-- <span *ngIf="!messageForm.get('message').valid && messageForm.get('message').touched" class="error">Please
+              enter
+              a valid message!</span> -->
+
+            <div class="validate"></div>
+
+            <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+              <div *ngIf="messageForm.controls.message.errors.required">Please write something for us!</div>
+            </div>
+          </div>
+
+
+
+
+          <div class="text-center"><button type="submit">Send Message</button></div>
+
+
+
+        </form>
+
+        <!-- <div *ngIf="submitted" class="results">
+          <strong>Name:</strong>
+          <span>{{ messageForm.controls.name.value }}</span>
+
+          <strong>Message:</strong>
+          <span>{{ messageForm.controls.message.value }}</span>
+        </div> -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- End Contact Me Section -->

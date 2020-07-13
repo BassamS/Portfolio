@@ -1,0 +1,44 @@
+<header id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-custom"> -->
+
+    <!-- logo -->
+    <a class="navbar-brand img-responsive logo" href="#"><img src="assets/images/logo.png" alt="logo"></a>
+
+    <!-- Collapse -->
+    <button class="navbar-toggler" (click)="toggleNavbar()" data-toggle="collapse"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+
+      <!-- Dummy class to align links center 1 -->
+      <span class="spacer2"></span>
+
+      <ul class="navbar-nav">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/portfolio">Projects</a>
+        </li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/about">About</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/resume">Resume</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/contact">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Dummy class to align links center2 -->
+      <span class="spacer"></span>
+
+      <!-- Icons -->
+      <div class="navbar-nav icons">
+        <a href="https://github.com/BassamS" target="_blank"><i class="fab fa-github" title="Github"></i></a>
+        <a href="https://es.linkedin.com/in/bassam-al-saedy-796b0244" target="_blank"><i class="fab fa-linkedin"
+            title="Linkedin"></i></a>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
