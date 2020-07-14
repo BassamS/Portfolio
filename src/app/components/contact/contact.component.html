@@ -48,7 +48,8 @@
 
       <div class="col-lg-6">
 
-        <form class="php-email-form" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <!-- <form class="php-email-form" [formGroup]="messageForm" (ngSubmit)="onSubmit()"> -->
+        <form name="contact" method="POST" data-netlify="true" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
 
           <h5 *ngIf="success">Your message has been sent. Thank you!</h5>
           <div class="form-row">

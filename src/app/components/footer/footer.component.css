@@ -4,8 +4,9 @@
 .page-footer {
   background-color:rgba(27, 35, 44, 0.898);
   color: #fff;
-  line-height: 1;
   font-size: 14px;
+  height: 60px;
+  line-height: 10px;
 }
 
 .footer-copyright{
