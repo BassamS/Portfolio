@@ -1,5 +1,7 @@
 # Portfolio
 
+This project is an exercise during my study at the IT Academy - Barcelona!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
 ## Development server
